@@ -5,12 +5,11 @@ const developers = ['501486494402215947'];
 
 console.log("Paaaaartly");
 
-client.on('ready', () => {
-    console.log(`Logged as ${client.user.tag}`)
-})
-
-
-if (message.content.startsWith(adminprefix + 'ply')) {
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
       message.channel.send(`**تم تغيير البلاينق الى   ${argresult}**`)
   } else 
