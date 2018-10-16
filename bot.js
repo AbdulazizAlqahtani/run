@@ -9,7 +9,7 @@ client.user.setPresence({
   status: 'dnd',
   game: {
      type: 0,
-     name: 'Owner ,',
+     name: '. ,',
      details: `Clan`,
      url: ' https://www.twitch.tv/justn_7765 ',
      state: `Crazyskills`,
