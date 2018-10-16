@@ -1,31 +1,48 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
+const adminprefix = "البريفكس";
+const developers = ['ايدي حسابك'];
+
+console.log("Paaaaartly");
+
+client.on('ready', () => {
+    console.log(`Logged as ${client.user.tag}`)
+})
 
 
-
-client.on("ready", () => {
-console.log('By : moshaks');
-client.user.setPresence({
-  status: 'dnd',
-  game: {
-     type: 0,
-     name: '. ,',
-     details: `Clan`,
-     url: ' https://www.twitch.tv/justn_7765 ',
-     state: `Crazyskills`,
-    application_id: '377479790195769345',
-     assets: {
-        small_image: `377480550207717376`,
-        small_text: 'تعرف مشاكس',
-        large_image: `377480353259978752`,
-        large_text: `IMrz ّζ͜͡MOSHADev` }
-
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**تم تغيير البلاينق الى   ${argresult}**`)
+  } else 
+     if (message.content === (adminprefix + "leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`**تَم تغيير الواتشينق الى   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**تَم تغيير الليسينينق الى   ${argresult}**`)
+  } else
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/paaaaaartly");
+      message.channel.send(`تم تغييرك حالتك بالتويتش الى   **${argresult}**`)
   }
-    });
+  if (message.content.startsWith(adminprefix + 'sn')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`جاري تغيير الأسم لـ ..**${argresult}** `)
+} else
+if (message.content.startsWith(adminprefix + 'sa')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`**جاري تغيير الأفتار... :** `);
+}
 });
 
 
 
-
-
-client.login("NTAxNDg2NDk0NDAyMjE1OTQ3.DqeDWg.O25z4dzmppj-PNSoA6wkGL5oKGk");
+client.login(process.env.BOT_TOKEN);
