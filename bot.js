@@ -12,7 +12,7 @@ client.user.setPresence({
      type: 0,
      name: 'Owner ,',
      details: `Clan`,
-     url: 'http://twitch.tv/moshaks-Dev',
+     url: 'https://www.twitch.tv/justn_7765',
      state: `Crazyskills`,
     application_id: '377479790195769345',
      assets: {
