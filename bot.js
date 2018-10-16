@@ -1,3 +1,4 @@
+ 
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
@@ -9,21 +10,20 @@ client.user.setPresence({
   status: 'dnd',
   game: {
      type: 0,
-     name: ' لآ تستسلم ، آلحياآة جميله .. ,',
-       details: `ولآ شيء يستحق آلحزن .`,
+     name: 'Owner ,',
+     details: `Clan`,
      url: 'http://twitch.tv/moshaks-Dev',
-     state: `#JuSTN#7766`,
-    application_id: '501486494402215947',
+     state: `Crazyskills`,
+    application_id: '377479790195769345',
      assets: {
-        small_image: `501757794257469450`,
-        small_text: 'Fuck Off',
-        large_image: `501758018682355723`,
-        large_text: `SeeYou.` }
+        small_image: `377480550207717376`,
+        small_text: 'تعرف مشاكس',
+        large_image: `377480353259978752`,
+        large_text: `IMrz ّζ͜͡MOSHADev` }
 
   }
     });
 });
-
 
 
 
