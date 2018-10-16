@@ -45,4 +45,4 @@ if (message.content.startsWith(adminprefix + 'sa')) {
 
 
 
-client.login()
+client.login(process.env.BOT_TOKEN);
