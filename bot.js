@@ -10,11 +10,7 @@ client.on('ready', () => {
 })
 
 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'ply')) {
+if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
       message.channel.send(`**تم تغيير البلاينق الى   ${argresult}**`)
   } else 
@@ -42,7 +38,4 @@ if (message.content.startsWith(adminprefix + 'sa')) {
     message.channel.send(`**جاري تغيير الأفتار... :** `);
 }
 });
-
-
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
