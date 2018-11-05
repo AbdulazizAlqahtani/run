@@ -11,5 +11,4 @@ channel.send(`سبآمم فقطط .`);
 })
  
  
-client.login("NTA4NzI5NjgyNzQ5OTQ3OTA0.DsIE1g.niKeyC67Xh4aNSh83pgWNJkabSY" ,
-"NTA5MDQ2Nzc2NDA2MzQzNjgx.DsIuNA.-zMEY32-Lr-fRNbZuMdpfTpkR10");
+client.login("NTA4NzI5NjgyNzQ5OTQ3OTA0.DsIE1g.niKeyC67Xh4aNSh83pgWNJkabSY");
