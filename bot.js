@@ -11,4 +11,4 @@ channel.send(`Hi , I'm Sad .`);
 })
  
  
-client.login("NTA4NzI5NjgyNzQ5OTQ3OTA0.DsIE1g.niKeyC67Xh4aNSh83pgWNJkabSY");
+client.login();
