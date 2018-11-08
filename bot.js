@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client1();
+const client = new Discord.Client2();
 console.log("Scrpit By Dream");
 
 
