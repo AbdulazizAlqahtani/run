@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client[];
 console.log("Scrpit By Dream");
 
 
@@ -11,5 +11,7 @@ channel.send(`Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I
 })
  
  
-client.login("NTA4NzI5NjgyNzQ5OTQ3OTA0.DsIE1g.niKeyC67Xh4aNSh83pgWNJkabSY");
+client.login["NTA4NzI5NjgyNzQ5OTQ3OTA0.DsIE1g.niKeyC67Xh4aNSh83pgWNJkabSY" ,
+"NTA5NDg5ODE2NTI2NzgyNDY0.DsOjIw.ZU02nz41JUsCBhEBjy4c3H5h40Q" ,
+"NTA5NDg3NzY2MjA4NTEyMDAx.DsOhsw.jo8teekXM-mWsa3Gf4M-wp2aEXA" ];
 
