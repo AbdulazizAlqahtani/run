@@ -1,88 +1,41 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const client2 = new Discord.Client();
+var prefix = "S";
+var adminprefix = 'S'
 
-client.on('ready', () => {
-   console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : Kahrbaa `);
-   console.log(`----------------`);
-   console.log(`Loadinng`);
-   console.log(`Loadinng.`);
-   console.log(`Loadinng..`);
-   console.log(`Loadinng...`);
-   console.log(`This Bots Online ' `);
-   console.log(`----------------`);
-});
-
-
+const developers = ["350547695569600522","id"]
 client.on('message', message => {
-    if(message.content === '!ديلي'){
-        message.channel.send('#daily')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '!كريدت'){
-        message.channel.send('#credits')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '!كريدت'){
-        message.channel.send('#credits')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '!ديلي'){
-        message.channel.send('#daily')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '!كريدت'){
-        message.channel.send('#credits')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '!كريدت'){
-        message.channel.send('#credits')
-    }
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.send(`✅`)
+  } else 
+     if (message.content === (adminprefix + "leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`✅`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`✅`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/dream");
+      message.channel.send(`**✅**`)
+  }
+  if (message.content.startsWith(adminprefix + 'ne')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`✅`)
+} else
+if (message.content.startsWith(adminprefix + 'av')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`✅`)
+}
 });
 
 
-
-client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!سبآم') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , **[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
-client2.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!سبآم') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi , I'm Sad . Hi ,**[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
-
-
-
-client.login(process.env.TOKEN);// لا تغير فيها شيء
-client2.login(process.env.TOKEN2);// لا تغير فيها شيء
+client.login(process.env.TOKEN4);// لا تغير فيها شيء
